@@ -14,6 +14,9 @@ Aplicação da metodologia Box-Jenkins modelagem de uma série temporal do consu
 **Projeto 4 - Série Temporais com PMDARIMA**
 Utilização de uma biblioteca (que replica o auto-ARIMA do R para a linguagem Python) para previsão do consumo de energia elétrica.
 
+**Projeto 5 - Modelagem multivariada de Séries Temporais**
+Uso do modelo VECM (Vector Error Correction Model) para analisar o comportamento de séries de preços futuros de commodities.
+
 **OBS**: Em cada projeto se encontra um link onde as bases de dados podem ser acessadas.
 
 
