@@ -20,6 +20,9 @@ Uso do modelo VECM (Vector Error Correction Model) para analisar o comportamento
 **Projeto 6 - Modelagem de Séries Temporais com Redes Neurais**
 Apliacação da rede neural LSTM para previsão de preços de fechamento das ações da Petrobras. O **RMSE** entre os valores preditos e os valores reais foi de 0.723.
 
+**Projeto 7 - Aplicação de modelos lineares em séries temporais**
+Foram aplicados 12 modelos lineares da biblioteca *Scikit-Learn* em dados de séries temporais de preços de ações do Itaú Unibanco, no período do ano de 2019 ao ano de 2020. O modelo com melhor desempenho nas métricas **RMSE** e $R^2$ foi o *Theil Sen Regressor*. O *Theil Sen Regressor*, que é um modelo linear robusto a *outliers* teve um **RMSE** de 0.48117 e um $R^2$ de 99.73%.
+
 **OBS**: Em cada projeto se encontra um link onde as bases de dados podem ser acessadas.
 
 
