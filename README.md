@@ -1,6 +1,7 @@
 # Series-Temporais
 
-Nesse repositório você encontrará projetos de séries temporal em python
+Nesse repositório você encontrará projetos com os principais métodos de modelagem de séries temporais, como:
+  1) Modelos determinísticos: 
 
 **Projeto 1 - Análise temporal do preço de casas**
 Apresentação e aplicação de algoritmos determinístico de séries temporais para modelagem e previsão de preços em casas em Londres;
