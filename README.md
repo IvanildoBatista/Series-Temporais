@@ -35,6 +35,9 @@ Apliacação da rede neural *LSTM* para previsão de preços de fechamento das a
 **Projeto 7 - Aplicação de modelos lineares em séries temporais**
 Foram aplicados 12 modelos lineares da biblioteca *Scikit-Learn* em dados de séries temporais de preços de ações do Itaú Unibanco, no período do ano de 2019 ao ano de 2020. O modelo com melhor desempenho nas métricas **RMSE** e **R2** foi o *Theil Sen Regressor*. O *Theil Sen Regressor*, que é um modelo linear robusto a *outliers* teve um **RMSE** de 0.48117 e um **R2** de 99.73%.
 
+**Projeto 8 - *Prophet Facebook* para modelagem de dados**
+Nesse projeto será usada a biblioteca Prophet Facebook para modelagem de duas séries temporais, mas que referem-se ao mesmo ativo (o preço do ouro, valores diários e mensais). Para a primeira série aplicamos o modelo e validamos os resultados com os últimos 150 dias e obtivemos um RMSE de **82.97**; já com os dados mensais utilizamos os últimos 24 meses para validação do modelo e obtivemos um RMSE de **66.97**.
+
 **OBS**: Em cada projeto se encontra um link onde as bases de dados podem ser acessadas.
 
 
