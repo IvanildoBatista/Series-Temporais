@@ -10,7 +10,9 @@ Nesse repositório você encontrará projetos com os principais métodos de mode
   
   4) **Redes neurais**: LSTM (*Long short-term memory*);
   
-  5) **Modelagem linear**: Regressão linear, Ridge, Lasso, Elastic-Net, *Stochastic Gradient Descent*, etc.
+  5) **Modelagem linear**: Regressão linear, Ridge, Lasso, Elastic-Net, *Stochastic Gradient Descent*, etc;
+  
+  6) **Prophet Facebook**.
 
 # PROJETOS
 
