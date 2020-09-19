@@ -1,8 +1,7 @@
 # Sobre o projeto
 
 Nesse projeto será usada a biblioteca Prophet Facebook para modelagem de duas séries temporais, mas que referem-se ao mesmo ativo. Trata-se dos preços futuros diários do ouro
-e dos preços mensais do ouro. Para a primeira série aplicamos o modelo e validados os resultados com os últimos 150 dias e obtivemos um RMSE de 82.97; já com os dados mensais
-utilizamos os últimos 24 meses para validação do modelo e obtivemos um RMSE de 66.97.
+e dos preços mensais do ouro. Essas séries foram escolhidas, pois o ouro mesmo tendo, no passado, bastante importância como meio de pagamento até o ponto de chegar a ser a base de valor das moedas do mundo (padrão-ouro) e até hoje é um ativo usado como investimento (um outro exemplo de metal muito usado como forma de investimento é a prata).
 
 # Etapas do projeto
 
@@ -24,3 +23,6 @@ utilizamos os últimos 24 meses para validação do modelo e obtivemos um RMSE d
 
 # Dados
 Todos os 2 arquivos dos dados estão anexados em formato csv nessa pasta.
+
+# Resultados
+Para a primeira série aplicamos o modelo e validados os resultados com os últimos 150 dias e obtivemos um RMSE de 82.97 e com os dados mensais utilizamos os últimos 24 meses para validação do modelo e obtivemos um RMSE de 66.97.
