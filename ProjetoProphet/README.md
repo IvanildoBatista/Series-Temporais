@@ -3,6 +3,16 @@
 Nesse projeto será usada a biblioteca Prophet Facebook para modelagem de duas séries temporais, mas que referem-se ao mesmo ativo. Trata-se dos preços futuros diários do ouro
 e dos preços mensais do ouro. Essas séries foram escolhidas, pois o ouro mesmo tendo, no passado, bastante importância como meio de pagamento até o ponto de chegar a ser a base de valor das moedas do mundo (padrão-ouro) e até hoje é um ativo usado como investimento (um outro exemplo de metal muito usado como forma de investimento é a prata).
 
+As principais vantagens da biblioteca Prophet Facebook são:
+
+       1) Pode ser usada mesmo por quem não tenha nenhuma noção de séries temporais;
+       
+       2) Fácil implementação, bastando apenas definir duas colunas (uma dos dados temporais - 'ds'- e outra para os valores da série -'y') 
+       
+       3) É uma bibiloteca simples e com poucos parâmetros, o que facilita o seu *tunning*;
+
+A principal desvantagem  é que essa biblioteca é um tipo de **caixa preta**, pois não se sabe bem como ela faz o processo de modelagem de dados.       
+
 # Etapas do projeto
 
 1) Importação das bibliotecas
