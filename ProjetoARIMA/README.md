@@ -11,10 +11,9 @@ contempla 4 etapas, que são:
 3) Diagnóstico dos resíduos: Essa é a etapa crucial, pois analisaremos os erros da séries (diferença entre a série original e a série modelada) e os erros/resíduos devem ter uma
                              distribuição normal (teste Jarque-Bera);
                              
-3.1) Aqui podemos inserir uma etapa (que não é tão relevante), que é a de validação do modelo, onde vamos pegar uma parte da própria série e vamos retirá-la e com os dados que 
-restarem vamos aplicar o modelo encontrado e, por fim, vamos comparar o real com o predito.
+4) Validação : Aqui podemos inserir uma etapa (que não é tão relevante), onde vamos retirar uma parte final da própria série e com os dados que restarem vamos aplicar o modelo encontrado e, por fim, vamos comparar o real com o predito.
                              
-4) Previsão: Após o(s) modelo(s) passarem na etapa anterior, então o modelo pode ser usado para gerar previsões. Caso tenhamos mais de um modelo que passe na etapa de diagnóstico dos resíduos, será escolhido o de menor AIC (Akaike Information Criteria).
+5) Previsão: Após o(s) modelo(s) passarem na etapa anterior, então o modelo pode ser usado para gerar previsões. Caso tenhamos mais de um modelo que passe na etapa de diagnóstico dos resíduos, será escolhido o de menor AIC (Akaike Information Criteria).
 
 # Biblioteca usadas
 
