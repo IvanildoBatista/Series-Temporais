@@ -7,7 +7,8 @@ As principais vantagens da biblioteca Prophet Facebook são:
 
        1) Pode ser usada mesmo por quem não tenha nenhuma noção de séries temporais;
        
-       2) Fácil implementação, bastando apenas definir duas colunas (uma dos dados temporais - 'ds'- e outra para os valores da série -'y') 
+       2) Fácil implementação, bastando apenas definir duas colunas (uma dos dados temporais - 'ds'- 
+       e outra para os valores da série -'y') 
        
        3) É uma bibiloteca simples e com poucos parâmetros, o que facilita o seu *tunning*;
 
