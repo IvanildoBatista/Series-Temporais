@@ -13,6 +13,8 @@ Nesse repositório você encontrará projetos com os principais métodos de mode
   5) **Modelagem linear**: Regressão linear, Ridge, Lasso, Elastic-Net, *Stochastic Gradient Descent*, etc;
   
   6) **Prophet Facebook**.
+  
+  7) **Auto Machine Learning para Séries Temporais**.
 
 # PROJETOS
 
