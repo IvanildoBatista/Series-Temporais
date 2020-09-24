@@ -40,6 +40,9 @@ Foram aplicados 12 modelos lineares da biblioteca *Scikit-Learn* em dados de sé
 **Projeto 8 - *Prophet Facebook* para modelagem de dados**
 Nesse projeto será usada a biblioteca Prophet Facebook para modelagem de duas séries temporais, mas que referem-se ao mesmo ativo (o preço do ouro, valores diários e mensais). Para a primeira série aplicamos o modelo e validamos os resultados com os últimos 150 dias e obtivemos um RMSE de **82.97**; já com os dados mensais utilizamos os últimos 24 meses para validação do modelo e obtivemos um RMSE de **66.97**.
 
+**Projeto 9 - *AutoML* para Séries Temporais**
+Utilizando a biblioteca *auto-ts* geramos 4 modelos para séries temporais para previsão da temperatura média de 114 dias da cidade de Déli, na índia. Os modelos foram: *Facebook Prophet*, ARIMA, SARIMAX, VAR e um modelo de *Machine Learning Random Forest*. O modelo de melhor resultado de previsão foi o *Facebook Prophet*, pois obteve as menores métricas de erro e o maior $R^2$.
+
 **OBS**: Em cada projeto se encontra um link onde as bases de dados podem ser acessadas.
 
 
