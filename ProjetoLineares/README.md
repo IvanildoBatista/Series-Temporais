@@ -21,9 +21,9 @@ um pouco de cada modelo e, ao fim, comparar os modelos e definir qual é a melho
 
 6) Aplicação dos modelos de regressão:
 
-  6.1) Comparação com *baseline*;
+      6.1) Comparação com *baseline*;
   
-  6.2) diagnóstico dos resíduos do modelo.
+      6.2) diagnóstico dos resíduos do modelo.
 
 7) Comparação dos resultados.
 
