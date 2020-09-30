@@ -8,13 +8,13 @@ eles são de fácil manipulação, entendimento e aplicação.
 
 Aqui iremos trabalhar com 4 tipos de algoritmos de suavização exponecial:
 
-1) Algoritmo de suavização Simples;
+1) **Algoritmo de suavização Simples**;
 
-2) Algoritmo de suavização Holt;
+2) **Algoritmo de suavização Holt**;
 
-3) Algoritmo de suavização Holt-Winter;
+3) **Algoritmo de suavização Holt-Winter**;
 
-4) Algoritmo de suavização Pegels.
+4) **Algoritmo de suavização Pegels**.
 
 Iremos falar sobre cada um desse algoritmos e como funcionam.
 
