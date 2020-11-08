@@ -1,4 +1,4 @@
-#Modelagem preços de ações com Redes Neurais Recorrentes (LSTM)
+# Modelagem preços de ações com Redes Neurais Recorrentes (LSTM)
 
 Nesse pequeno projeto iremos aplicar uma rede neural artificial para modelar e gerar previsões com séries temporais. A rede neural que usaremos se chama LSTM (ou *Long short-term*
 *memory*) e é uma rede neural recorrente, ou seja, ela é uma estrutura de processamento que consegue representar grandes variedades de comportamentos dinâmicos.
