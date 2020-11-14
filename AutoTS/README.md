@@ -23,13 +23,15 @@ modelos das bibliotecas *Facebook Prophet*, *PyFlux*, *Stasmodels* e *Scikit-Lea
 
 # Resultados
 
+Conforme tabela abaixo, o modelo que gerou melhores previsões foi o *Facebook Prophet*, que obteve as menores métricas de erros e o maior $R^2$.
+
 | |   *RMSE*   |  *MAE*  |  *MSE*|  *MSLE* |  *MedAE* |  $R^2$ |
 |:----------------:|:------------------:|:------------------:|:------------------:|:------------------: |:------------------:|:------------------:|
-|**Prophet** | **3.173**| **2.558** | **10.071**|**0.025**|**2.193**|**70.3%**|
-|SARIMAX | 9.872| 8.558 | 97.447| 0.183 | 8.3|-7754.9%|
-|VAR | 10.477| 8.99 | 109.766| 0.2 | 9.219|-9522.3%|
+|**Facebook Prophet** | **3.173**| **2.558** | **10.071**|**0.025**|**2.193**|**70.3%**|
+|*SARIMAX* | 9.872| 8.558 | 97.447| 0.183 | 8.3|-7754.9%|
+|Vetor Autorregressivo | 10.477| 8.99 | 109.766| 0.2 | 9.219|-9522.3%|
 |*Machine Learning* | 11.747| 10.357 | 137.99| 0.253 | 11.693|-376.2%|
-|ARIMA | 12| 10 | 133| 0 | 12|-46300 %|
+|*ARIMA* | 12| 10 | 133| 0 | 12|-46300 %|
 
 
 
