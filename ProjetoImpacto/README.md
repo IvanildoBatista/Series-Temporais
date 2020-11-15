@@ -18,7 +18,9 @@ extensa usaremos uma biblioteca de séries temporais no python que gera o modelo
 3) Breve análise exploratória dos dados;
 
 4) Estimando um cenário contrafactual:
+
    4.1) Treinamento do modelo *ARIMA*;
+   
    4.2) Aplicação da *Causal Impact*;
 
 5) Relatório dos resultados.
