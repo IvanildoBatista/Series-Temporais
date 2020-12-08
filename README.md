@@ -8,7 +8,7 @@ Nesse repositório você encontrará projetos com os principais métodos de mode
   
   3) **Modelagem Multivariada**: Modelos VAR (Vetores Autorregressivos) e modelo VECM (Vetores com correção de erros);
   
-  4) **Redes neurais**: LSTM (*Long short-term memory*);
+  4) **Redes neurais**: Recorrentes (LSTM - *Long short-term memory*) e Convolucionais (*Conv1D*);
   
   5) **Modelagem linear**: Regressão linear, Ridge, Lasso, Elastic-Net, *Stochastic Gradient Descent*, etc;
   
