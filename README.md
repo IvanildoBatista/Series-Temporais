@@ -2,15 +2,15 @@
 
 Nesse repositório você encontrará projetos com os principais métodos de modelagem de séries temporais, como:
 
-  1) **Modelos determinísticos**: Algoritmos de suavização simples, Holt, Holt-Winters e Pegels;
+  1) **Modelos determinísticos**: Algoritmos de suavização simples, *Holt*, *Holt-Winters* e *Pegels*;
   
-  2) **Modelagem Univariada**: Modelagem Box-Jenkins ou modelo ARIMA (Autorregressivo integrado com médias móveis);
+  2) **Modelagem Univariada**: Modelagem Box-Jenkins ou modelo *ARIMA* (Autorregressivo integrado com médias móveis);
   
-  3) **Modelagem Multivariada**: Modelos VAR (Vetores Autorregressivos) e modelo VECM (Vetores com correção de erros);
+  3) **Modelagem Multivariada**: Modelos *VAR* (Vetores Autorregressivos) e modelo *VECM* (Vetores com correção de erros);
   
-  4) **Redes neurais**: Recorrentes (LSTM - *Long short-term memory*) e Convolucionais (*Conv1D*);
+  4) **Redes neurais**: Recorrentes (*LSTM* - *Long short-term memory*) e Convolucionais (*Conv1D*);
   
-  5) **Modelagem linear**: Regressão linear, Ridge, Lasso, Elastic-Net, *Stochastic Gradient Descent*, etc;
+  5) **Modelagem linear**: Regressão linear, *Ridge*, *Lasso*, *Elastic-Net*, *Stochastic Gradient Descent*, etc;
   
   6) **Prophet Facebook**.
   
@@ -45,7 +45,7 @@ Nesse projeto será usada a biblioteca Prophet Facebook para modelagem de duas s
 **Projeto 9 - *AutoML* para Séries Temporais**
 Utilizando a biblioteca *auto-ts* geramos 4 modelos para séries temporais para previsão da temperatura média de 114 dias da cidade de Déli, na índia. Os modelos foram: *Facebook Prophet*, ARIMA, SARIMAX, VAR e um modelo de *Machine Learning Random Forest*. O modelo de melhor resultado de previsão foi o *Facebook Prophet*, pois obteve as menores métricas de erro e o maior R-quadrado.
 
-Projeto 10 - Modelagem de Séries Temporais com Redes Neurais Convolucionais
+**Projeto 10 - Modelagem de Séries Temporais com Redes Neurais Convolucionais**
 Aplicação da rede neural Convolucional (*Conv1D*) para previsão de Consumo de energia elétrica. Foir gerado um modelo (com treinamento de 10 épocas) para prever as 4440 observações finais da série de energia e a métrica de erro *RMSE* (raiz do erro quadrado médio) deum um valor de 0.40, uma resultado considerado bastante satisfatório.
 
 **OBS**: Em cada pasta de projeto se encontra um link onde as bases de dados podem ser acessadas e as bases de dados em formato csv.
