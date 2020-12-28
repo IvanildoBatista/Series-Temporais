@@ -1,4 +1,4 @@
-# Series-Temporais
+# Séries Temporais
 
 Nesse repositório você encontrará projetos com os principais métodos de modelagem de séries temporais, como:
 
