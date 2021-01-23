@@ -14,7 +14,9 @@ Nesse repositório você encontrará projetos com os principais métodos de mode
   
   6) **Prophet Facebook**.
   
-  7) **Auto Machine Learning para Séries Temporais**.
+  7) **Neural Facebook**.
+  
+  8) **Auto Machine Learning para Séries Temporais**.
 
 # Projetos
 
