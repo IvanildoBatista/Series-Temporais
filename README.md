@@ -45,7 +45,7 @@ Foram aplicados 12 modelos lineares da biblioteca *Scikit-Learn* em dados de sé
 Nesse projeto será usada a biblioteca Prophet Facebook para modelagem de duas séries temporais, mas que referem-se ao mesmo ativo (o preço do ouro, valores diários e mensais). Para a primeira série aplicamos o modelo e validamos os resultados com os últimos 150 dias e obtivemos um RMSE de **82.97**; já com os dados mensais utilizamos os últimos 24 meses para validação do modelo e obtivemos um RMSE de **66.97**.
 
 **Projeto 9 - *AutoML* para Séries Temporais**
-Utilizando a biblioteca *auto-ts* geramos 4 modelos para séries temporais para previsão da temperatura média de 114 dias da cidade de Déli, na índia. Os modelos foram: *Facebook Prophet*, ARIMA, SARIMAX, VAR e um modelo de *Machine Learning Random Forest*. O modelo de melhor resultado de previsão foi o *Facebook Prophet*, pois obteve as menores métricas de erro e o maior R-quadrado.
+Utilizando a biblioteca *auto-ts* geramos 4 modelos para séries temporais para previsão da temperatura média de 114 dias da cidade de Déli, na Índia. Os modelos foram: *Facebook Prophet*, ARIMA, SARIMAX, VAR e um modelo de *Machine Learning Random Forest*. O modelo de melhor resultado de previsão foi o *Facebook Prophet*, pois obteve as menores métricas de erro e o maior R-quadrado.
 
 **Projeto 10 - Modelagem de Séries Temporais com Redes Neurais Convolucionais**
 Aplicação da rede neural Convolucional (*Conv1D*) para previsão de Consumo de energia elétrica. Foir gerado um modelo (com treinamento de 10 épocas) para prever as 4440 observações finais da série de energia e a métrica de erro *RMSE* (raiz do erro quadrado médio) deum um valor de 0.40, uma resultado considerado bastante satisfatório.
