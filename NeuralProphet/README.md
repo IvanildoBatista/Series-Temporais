@@ -2,9 +2,11 @@
 
 Nesse projeto irei aplicar uma biblioteca chamada Neural Prophet, que é uma implementação *PyTorch* de Redes Neurais. 
 A inspiração vem da biblioteca *Facebook Prophet* e o objetivo é o mesmo: tornar o processo de previsão de séries temporais algo mais amigável para profissionais que não 
-possuam tanto conhecimento nesse tipo de modelagem. Aqui irei aplicar essa biblioteca numa série temporal de Vendas de varejo de cerveja, vinhos e licores, que pode ser obtida aqui. 
-Essa série possui 357 observações e tem periodicidade mensal, que vai de Janeiro de 1992 até Novembro de 2020.
+possuam tanto conhecimento nesse tipo de modelagem. Aqui irei aplicar essa biblioteca numa série temporal de Vendas de varejo de cerveja, vinhos e licores, que pode ser obtida aqui. Essa série possui 357 observações e tem periodicidade mensal, que vai de Janeiro de 1992 até Novembro de 2020.
 
+# Dados
+
+Os dados podem ser obtidos em https://fred.stlouisfed.org/series/MRTSSM4453USN.
 
 # Etapas
 
