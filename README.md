@@ -18,7 +18,7 @@ Nesse repositório você encontrará projetos com os principais métodos de mode
   
   8) **Auto Machine Learning para Séries Temporais**.
 
-# Projetos
+## Projetos
 
 **Projeto 1 - Aplicação de modelos determinísticos para o preço de casas**
 Apresentação e aplicação de algoritmos determinístico de séries temporais para modelagem e previsão de preços em casas em Londres. Foram utilizados os principais modelos e o modelo com melhor desempenho foi o Algoritmo de Suavização de **Pegels aditivo** com um erro médio absoluto (MAE) de **3981.576** e raiz quadrada a soma dos erros quadrados (RMSE) de 5261.611;
