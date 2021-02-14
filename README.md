@@ -17,6 +17,8 @@ Nesse repositório você encontrará projetos com os principais métodos de mode
   7) **Biblioteca Neural Prophet**.
   
   8) **Auto Machine Learning para Séries Temporais**.
+  
+  9) **Biblioteca DARTS**
 
 ## Projetos
 
