@@ -1,6 +1,6 @@
 # Sobre o projeto
 
-Nesse projeto é aplicada a metodologia Box-Jenkins, que é um abordagem de modelagem de séries temporais multivariadas. Esse tipo de abordagem é bem famosa e muito usada e
+Nesse projeto é aplicada a metodologia *Box-Jenkins*, que é um abordagem de modelagem de séries temporais multivariadas. Esse tipo de abordagem é bem famosa e muito usada e
 contempla 4 etapas, que são:
 
 1) **Identificação** : iremos identificar os possíveis parâmetros do modelo (p,d,q) por meio de testes estatísticos (teste Dickey-Fuller Aumentado, por exemplo) e ferramentas de
