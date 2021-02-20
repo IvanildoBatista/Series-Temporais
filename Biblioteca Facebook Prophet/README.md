@@ -1,7 +1,7 @@
-# Sobre o projeto
+# Sobre a pasta
 
-Nesse projeto será usada a biblioteca Prophet Facebook para modelagem de duas séries temporais, mas que referem-se ao mesmo ativo. Trata-se dos preços futuros diários do ouro
-e dos preços mensais do ouro. Essas séries foram escolhidas, pois o ouro mesmo tendo, no passado, bastante importância como meio de pagamento até o ponto de chegar a ser a base de valor das moedas do mundo (padrão-ouro) e até hoje é um ativo usado como investimento (outros exemplos de metais, considerado preciosos, e muito usados como forma de investimento são a Platina, paládio, irídio e a prata).
+Nessa pasta consta alguns projetos em que foi usada a biblioteca *Facebook Prophet* para modelagem de duas séries temporais. O primeiro trata dos preços futuros diários do ouro
+e dos preços mensais do ouro; já o segundo trata de modelagem da série de vendas de *champagne*.
 
 Como forma de modelagem usarem a biblioteca Prophet Facebook, desenvolvida pela empresa que leva o nome. As principais vantagens da biblioteca Prophet Facebook são:
 
@@ -33,7 +33,4 @@ A principal desvantagem  é que essa biblioteca é um tipo de **caixa preta**, p
 6) Statsmodels
 
 ## Dados
-Todos os 2 arquivos dos dados estão anexados em formato csv nessa pasta.
-
-## Resultados
-Para a primeira série aplicamos o modelo e validados os resultados com os últimos 150 dias e obtivemos um RMSE de 82.97 e com os dados mensais utilizamos os últimos 24 meses para validação do modelo e obtivemos um RMSE de 66.97.
+Todos os arquivos dos dados estão anexados em formato *csv* nessa pasta.
