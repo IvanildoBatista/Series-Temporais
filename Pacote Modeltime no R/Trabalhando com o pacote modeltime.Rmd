@@ -1,0 +1,359 @@
+---
+title: "Trabalhando com o pacote Modeltime"
+author: "Ivanildo Batista da Silva Júnior"
+date: "9 de abril de 2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Um grande desafio para organizações, empresas e governos e estimar um horizonte previsível do futuro, pois sabe-se que a ocorrência de eventos são dotados de incertezas. Um tipo de dado bastante conhecido é a série temporal, que como o nome já explicita, é uma sequência de valores ao longo de um período de tempo (exemplo: preço de commodities durante 10 anos, precipitação de chuva anual, velocidade do vento anual, número mensal de homicídios, consumo de energia elétrica semestral, etc.).Esses dados são analisados/estudados por especialistas com o objetivo de identificar padrões e extrair *insights*; e dentro dessa análise há a etapa de previsão, ou seja, tentar estimar como será o comportamento dessa série de tempo em um futuro desconhecido.
+
+Para auxiliar nesse desafio de criar cenários, gerar previsões e na tomada de decisão do analista, são usados modelos matemáticos/estatísticos que podem ser determinísticos ou estocásticos. Existem vários tipos de modelos que, dos mais simples aos mais complexos, possuem uma variedade de parâmetros.
+
+O *R* possui vários pacotes para analisar e modelar séries temporais, porém um pacote bastante interessante que possui uma variedade de modelos é a *modeltimes*. Esse pacote usa a estrutura de previsão de séries temporais para uso com o ecossistema *tidymodels*, um outro pacote do *R*.
+
+Os modelos incluem ARIMA, Suavização exponencial *Holt-Winter* e modelos de série temporal adicionais dos pacotes de *forecast* e *Prophet Facebook*. Assim sendo, posso treinar vários modelos de séries temporais, tornando esse pacote uma ferramenta de *Auto Time Series*, assim como funciona pacote de *Auto Machine Learning*.
+
+### Dados
+
+Os dados foram extraídos do *site* do FRED (*Federal Reserve Economic Data*) e trata da vendas no varejo de lojas de cerveja, vinho e licores. Os dados possuem periodicidade mensal de Janeiro de 1992 até Janeiro de 2021. Os dados podem ser obtidos em [aqui](https://fred.stlouisfed.org/series/MRTSSM4453USN).
+
+
+Vamos iniciar importando os pacotes.
+
+**Instalando os pacote**
+```{r}
+library(xgboost)
+library(tidymodels)
+library(modeltime)
+library(tidyverse)
+library(lubridate)
+library(timetk)
+
+```
+
+E em seguida importando os dados.
+
+**Importando os dados**
+```{r}
+beer = read_delim('MRTSSM4453USN.csv', delim = ',')
+```
+
+**Transformando a base de dados em uma série temporal**
+```{r}
+beer_time_series <- ts(beer[,2],start=c(1992,1),
+                       end=c(2021,1),frequency=12)
+```
+
+### Análise exploratória dos dados
+
+Agora irei fazer uma breve análise exploratória dos dados.
+
+**Primeiras e últimas observações**
+```{r}
+head(beer_time_series)
+tail(beer_time_series)
+```
+
+**Dimensão da base de dados**
+```{r}
+dim(beer_time_series)
+```
+
+**Decomposição da série**
+
+Realizei a decomposição da série, primeiramente na forma aditiva, onde vemos a série observada, em seguida a tendência (percebemos no final da tendência uma mudança de inclinação da mesma), depois a sazonalidade e, por fim, os resíduos (onde ainda consta a presença de algum resquícios de sazonalidade).
+```{r}
+#decomposição aditiva
+plot(decompose(beer_time_series))
+```
+
+N decomposição multiplicativa observa-se uma decomposição semelhante, mas com a diferença nos resíduos que assemelham-se com um ruído branco.
+```{r}
+#decomposição multiplicativa
+plot(decompose(beer_time_series, type="mult"))
+```
+
+**Gráficos de autocorrelação e autocorrelação parcial**
+
+Pelos gráficos abaixo podemos oberservar que a série é não estacionária, pois há um decaimento demorado do gráfico de autocorrelação.
+
+```{r}
+acf(beer_time_series)
+```
+
+No gráfico de autocorrelação parcial, mesmo com o rápido decaimento, vemos defasagens que são significativas.
+```{r}
+pacf(beer_time_series)
+```
+**Histograma da série temporal**
+
+O comportamento dos dados da série não é normal (formato de sino).
+```{r}
+hist(beer_time_series)
+```
+
+**Boxplot da série temporal**
+
+Há apenas 3 valores extremos.
+
+```{r}
+boxplot(beer_time_series)
+```
+
+
+### Modelagem da série temporal
+
+Transformando a base de dados para o formato adequado.
+```{r}
+beer <- beer %>% select(date = DATE, MRTSSM4453USN)
+```
+ 
+**Plotando a série temporal**
+
+Nos gráfico abaixo podemos ver que a série possui forte presença de tendência global e de sazonalidade.
+
+```{r}
+beer %>%
+  ggplot(aes(x = date, y = MRTSSM4453USN)) +
+  geom_line()
+```
+
+
+**com a função do pacote modeltime**
+```{r}
+#cria uma linha com a tendÃªncia da sÃ©rie.
+beer %>%
+  plot_time_series(date, MRTSSM4453USN)
+```
+
+**Separando os dados para modelo**
+
+85% da série será usada para treino dos modelos e os outros 15% para realizaçãoo da validação dos modelos.
+
+```{r}
+splits <- initial_time_split(beer, prop = 0.8)
+splits
+```
+
+**Treinamento os modelos**
+
+Nessa etapa irei treinar 8 modelos diferentes utilizando os parâmetros padrão de cada modelo.
+
+```{r}
+#modelo 1: MODELO AUTO ARIMA
+modelo_1 <- arima_boost(min_n = 2,learn_rate = 0.015) %>%
+  set_engine(engine = "auto_arima_xgboost") %>%
+  fit(MRTSSM4453USN ~ date, data = training(splits))
+
+#modelo 2 : 
+modelo_2 <- arima_reg() %>%
+  set_engine(engine = "auto_arima") %>%
+  fit(MRTSSM4453USN ~ date, data = training(splits))
+
+#modelo 3 : PROPHET
+modelo_3 <- prophet_reg() %>%
+  set_engine(engine = "prophet") %>%
+  fit(MRTSSM4453USN ~ date, data = training(splits))
+
+#modelo 4 : PROPHET XGBOOST
+#model_4 <- prophet_reg() %>%
+ # set_engine(engine = "prophet_xgboost") %>%
+  #fit(MRTSSM4453USN ~ date, data = training(splits))
+
+#modelo 5
+modelo_5 <- exp_smoothing() %>%
+  set_engine(engine = "ets") %>%
+  fit(MRTSSM4453USN ~ date, data = training(splits))
+
+#model 6
+modelo_6 <- seasonal_reg() %>%
+  set_engine(engine = "stlm_arima") %>%
+  fit(MRTSSM4453USN ~ date, data = training(splits))
+
+#model 7
+modelo_7 <- seasonal_reg() %>%
+  set_engine(engine = "stlm_ets") %>%
+  fit(MRTSSM4453USN ~ date, data = training(splits))
+
+
+#modelo 8
+modelo_8 <- prophet_boost() %>%
+  set_engine(engine = "prophet_xgboost") %>%
+  fit(MRTSSM4453USN ~ date, data = training(splits))
+
+#modelo 9
+modelo_9 <- nnetar_reg() %>%
+  set_engine(engine = "nnetar") %>%
+  fit(MRTSSM4453USN ~ date, data = training(splits))
+
+#modelo 10
+#modelo_10 <- naive_reg() %>%
+ # set_engine(engine = "naive") %>%
+#  fit(MRTSSM4453USN ~ date, data = training(splits))
+```
+
+**Criando a tabela com os modelos**
+
+Inserindo os modelos em uma tabela para realizar as próximas etapas com todos eles simultaneamente.
+
+```{r}
+tabela_de_modelos <- modeltime_table(
+  modelo_1,
+  modelo_2,
+  modelo_3,
+  #model_4,
+  modelo_5,
+  modelo_6,
+  modelo_7,
+  modelo_8,
+  modelo_9
+ # model_10
+)
+```
+
+**Tabela com os modelos**
+
+Vemos que os parâmetros de cada modelos foram escolhidos de forma automática pelo pacote no momento do treinamento. Esse parâmetros podem ser alterados a critério de quem está manipulando o pacote.
+```{r}
+tabela_de_modelos
+```
+
+**Gerando as previsões**
+
+Dado que temos os modelos treinados
+```{r}
+previsoes <- tabela_de_modelos %>%
+  modeltime_calibrate(new_data = testing(splits))
+```
+
+### Validação dos modelos
+
+**Previsões *vs* Valores reais**
+
+Abaixo irei comparar graficamente as previsões geradas com os valores reais. 
+```{r}
+previsoes %>%
+  modeltime_forecast(
+    new_data    = testing(splits),
+    actual_data = beer
+  ) %>%
+  plot_modeltime_forecast(
+    .legend_max_width = 25, # For mobile screens
+  )
+```
+
+**Métricas de avaliação**
+Não é muito recomendado a análise meramente visual, por isso é necessário uma análise mais objetiva, por isso cada modelos será analisado utilizando as seguintes métricas de avaliação:
+
+1) **mae** (erro absoluto médio);
+
+2) **mape** (erro médio absoluto percentual)
+
+3) **mase** (Erro médio absoluto escalado)
+
+4) **smape** (erro médio absoluto percentual simétrico)
+
+5) **rmse** (raiz do erro médio quadrado)
+
+6) **rsq** ou **$R^2$** (R quadrado - coeficiente de determinação).
+
+Com exceção do **$R^2$** (que deve ser o maior possível), todas as outras métricas devem estar o mais próximo possível de 0 (zero) . 
+
+Os resultado da tabela abaixo mostram que os melhores modelos foram o 4, 8, 1 e 2.
+
+```{r}
+previsoes %>%
+  modeltime_accuracy() %>%
+  table_modeltime_accuracy()
+```
+
+**Análise dos resíduos de cada modelo na amostra**
+
+Aqui eu irei analisar o comportamento dos resíduos dos dados usados para treinar cada modelo. O ideal é que que o comportamento dos resíduos sejam bem comportados, ou seja, com uma distribuição normal (média em torno de zero e variância constante).
+
+```{r}
+tabela_de_modelos %>%
+  modeltime_calibrate(new_data = training(splits)) %>%
+  modeltime_residuals() %>%
+  plot_modeltime_residuals()
+```
+
+**Análise dos resíduos de cada modelo fora da amostra**
+
+Aqui serão analisado os resíduos dos dados reais não usado na modelagem com as previsões geradas dos modelos.
+
+```{r}
+tabela_de_modelos %>%
+  modeltime_calibrate(new_data = testing(splits)) %>%
+  modeltime_residuals() %>%
+  plot_modeltime_residuals()
+```
+
+
+**Teste nos resíduos de dentro e fora da amostra**
+
+O teste aplicado aos resíduos é o Teste *Shapiro-Wilk* que tem como hipóteses :
+
+1) Hipótese Nula ($H_0$):A amostra provém de uma população normal;
+
+2) Hipótese alternativa ($H_1$) : A amostra não provém de uma população normal.
+
+São gerados outros dois teste de normalidade na saída desse comando, que são o *Box - Pierce* e o *Ljung-Box* que apresentam as mesmas hipóteses nulas:
+
+1) Hipótese Nula ($H_0$): Os resíduos são *i.i.d.* (independentes e idênticamente distribuídos);
+
+2) Hipótese alternativa ($H_1$) : Os resíduos não são *i.i.d.* (independentes e idênticamente distribuídos)
+
+Também é gerado teste de *Durbin-Watson* que analisa se há autocorrelação serial nos resíduos. Basicamente, é ideal que o modelo gerado não tenha resíduos autocorrelacionados, sendo que pode existir autocorrelação positiva ou negativa. Para esse teste queremos que o seu resultado esteja o mais próximo possível do valor 2 (ausência de autocorrelação serial).
+
+
+Para os dados de dentro da amostra tivemos como resultado que os modelos 1, 4, 5, 6 e 8 apresentaram comportamento normal (pelo teste *Shapiro-Wilk*). Os resultados dos testes *Box - Pierce* e o *Ljung-Box* desses modelos apresentaram resultados em que aceitamos a hipótese nula de *i.i.d.* dos resíduos.
+
+E, por fim, todos eles apresentaram valores do teste *Durbin-Watson* próximos de 2, evidenciando ausência de autocorrelação seria (desse o mais próximo do valor 2 foi o modelo 1).
+```{r}
+#para os dados de treino (dentro da amostra)
+tabela_de_modelos %>%
+  modeltime_calibrate(new_data = training(splits)) %>%
+  modeltime_residuals() %>%
+  modeltime_residuals_test()
+```
+
+Agora para os resíduos de fora da amostra todos os resultados dos testes foram insatisfatórios. Uma coisa que pode ser percebida nessa série é o impacto da pandemia do coronavírus e isso provavelmente refletiu na aqui nesses resultados.
+
+```{r}
+#para os dados de teste (fora da amostra)
+tabela_de_modelos %>%
+  modeltime_calibrate(new_data = testing(splits)) %>%
+  modeltime_residuals() %>%
+  modeltime_residuals_test()
+```
+
+**Retreino do modelo**
+
+Irei pegar todos os modelos e irei trená-los novamente com toda a série temporal.
+
+```{r}
+retreino <- previsoes %>%
+  modeltime_refit(data = beer)
+
+```
+
+**Previsão com os modelos retreinados**
+
+Agora a última etapa desse projeto é gerar previsões para um horizonte de tempo desconhecido, usando os modelos para gerar cenários futuros de como a nossa variável irá comportar-se.
+
+```{r}
+retreino %>%
+  modeltime_forecast(h = "3 years", actual_data = beer) %>%
+  plot_modeltime_forecast(
+    .legend_max_width = 25, # For mobile screens
+  )
+```
+
+### Conclusão
+
+Nesse projeto realizei uma pequena exploração desse pacote que mostrou-se muito útil para modelagem de séries temporais. Infelizmente os modelos treinado não obtiveram um bom desempenho quando realizada a etapa de validação, entretanto vale salientar (conforme gráfico dos resíduos) que a maior proporção da diferença entre estimado e realizado foi no ano de 2020, ano que ocorreu a pandemia do coronavírus. Em seguida, em outros projetos, utilizarei outros módulos desse pacote, que utiliza modelos de *machine learning* e *redes neurais*.
