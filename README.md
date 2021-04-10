@@ -12,13 +12,15 @@ Nesse repositório você encontrará projetos com os principais métodos de mode
   
   5) **Modelagem linear**: Regressão linear, *Ridge*, *Lasso*, *Elastic-Net*, *Stochastic Gradient Descent*, etc;
   
-  6) **Biblioteca Facebook Prophet**.
+  6) **Biblioteca Facebook Prophet**;
   
-  7) **Biblioteca Neural Prophet**.
+  7) **Biblioteca Neural Prophet**;
   
-  8) **Auto Machine Learning para Séries Temporais**.
+  8) **Auto Machine Learning para Séries Temporais**;
   
-  9) **Biblioteca DARTS**
+  9) **Biblioteca DARTS**;
+  
+  10) **Pacote Modeltime do R**;
 
 ## Projetos
 
