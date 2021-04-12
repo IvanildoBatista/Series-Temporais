@@ -12,7 +12,7 @@ Nesse repositório você encontrará projetos com os principais métodos de mode
   
   5) **Modelagem linear**: Regressão linear, *Ridge*, *Lasso*, *Elastic-Net*, *Stochastic Gradient Descent*, etc;
   
-  6) **Biblioteca Facebook Prophet**;
+  6) **Biblioteca Facebook Prophet** (para séries univaridas e multivariadas);
   
   7) **Biblioteca Neural Prophet**;
   
