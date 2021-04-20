@@ -21,6 +21,8 @@ Nesse repositório você encontrará projetos com os principais métodos de mode
   9) **Biblioteca DARTS**;
   
   10) **Pacote Modeltime do R**;
+  
+  11) **Decomposição de séries temporais**: Aplicação de métodos de decomposição sazonal, *STL* e de filtros de séries temporais.
 
 ## Projetos
 
