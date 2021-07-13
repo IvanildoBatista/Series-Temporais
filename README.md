@@ -22,7 +22,9 @@ Nesse repositório você encontrará projetos com os principais métodos de mode
   
   10) **Pacote Modeltime do R**;
   
-  11) **Decomposição de séries temporais**: Aplicação de métodos de decomposição sazonal, *STL* e de filtros de séries temporais.
+  11) **Decomposição de séries temporais**: Aplicação de métodos de decomposição sazonal, *STL* e de filtros de séries temporais;
+  
+  12) **Análise de tendência em séries temporais**. 
 
 ## Projetos
 
