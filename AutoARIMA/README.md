@@ -1,8 +1,8 @@
-# Aplicando AutoARIMA em Python
+# Aplicando *AutoARIMA* em *Python*
 
-Uma das metodologias mais conhecidas em séries temporais é a *Box-Jenkin*s, que são um conjunto de procedimentos que são realizados em uma certa sequência até encontramos o melhor modelo ARIMA (autorregressivo integrado com médias móveis). Entretanto, ao invés de realizarmos as etapas dessa metodologia, podemos escolher o modelo de forma automática e para isso existe a função *auto.arima* que é muito usada no *software* estatístico *R*.
+Uma das metodologias mais conhecidas em séries temporais é a *Box-Jenkin*s, que são um conjunto de procedimentos que são realizados em uma certa sequência até encontramos o melhor modelo *ARIMA* (autorregressivo integrado com médias móveis). Entretanto, ao invés de realizarmos as etapas dessa metodologia, podemos escolher o modelo de forma automática e para isso existe a função *auto.arima* que é muito usada no *software* estatístico *R*.
 
-O objetivo desse pequeno projeto é usar o autoarima do pacote pmdarima (que não é um pacote muito conhecido do python) para previsão de séries temporais. Uma das vantagens do *autoARIMA* é que não é necessário interpretar as funções de autocorrelação e autocorrelação parcial para escolher o parâmetros *p, P, d, D, q* e *Q*. Podemos definí-los e o *autoarima* irá fazer as combinações desses parâmetros e gerará os AIC's de cada modelo e escolheremos, então, o modelo de menor AIC (que é o modelo mais simples que minimizaria os resíduos).
+O objetivo desse pequeno projeto é usar o autoarima do pacote pmdarima (que não é um pacote muito conhecido do python) para previsão de séries temporais. Uma das vantagens do *autoARIMA* é que não é necessário interpretar as funções de autocorrelação e autocorrelação parcial para escolher o parâmetros *p, P, d, D, q* e *Q*. Podemos definí-los e o *autoarima* irá fazer as combinações desses parâmetros e gerará os AIC's de cada modelo e escolheremos, então, o modelo de menor *AIC* (que é o modelo mais simples que minimizaria os resíduos).
 
 ## Etapas
 
