@@ -13,7 +13,7 @@ Nesse repositório você encontrará projetos com os principais métodos de mode
   5) **Modelagem linear**: Regressão linear, *Ridge*, *Lasso*, *Elastic-Net*, *Stochastic Gradient Descent*, etc;
   
   6) **Biblioteca Facebook Prophet** (para séries univaridas e multivariadas);
-  
+
   7) **Biblioteca Neural Prophet**;
   
   8) **Auto Machine Learning para Séries Temporais (AutoTS, PyCaret e ATSpy)**;
@@ -24,7 +24,11 @@ Nesse repositório você encontrará projetos com os principais métodos de mode
   
   11) **Decomposição de séries temporais**: Aplicação de métodos de decomposição sazonal, *STL* e de filtros de séries temporais;
   
-  12) **Análise de tendência em séries temporais com teste Mann Kendall**. 
+  12) **Análise de tendência em séries temporais com teste Mann Kendall**;
+
+  13) **Biblioteca *AutoPy* **;
+  
+  14) **Biblioteca *Pycaret* **. 
 
 ## Projetos
 
