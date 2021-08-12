@@ -26,9 +26,9 @@ Nesse repositório você encontrará projetos com os principais métodos de mode
   
   12) **Análise de tendência em séries temporais com teste Mann Kendall**;
 
-  13) **Biblioteca *AutoPy**;
+  13) **Biblioteca AutoPy**;
   
-  14) **Biblioteca *Pycaret**. 
+  14) **Biblioteca Pycaret**. 
 
 ## Projetos
 
