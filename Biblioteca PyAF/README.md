@@ -1,4 +1,8 @@
+# *PyAF* para previsão de temperatura mensal
 
+PyAF é uma biblioteca Python de código aberto para previsão automática de séries temporais construída usando bibliotecas tradicionais de machine learning. Dentre os modelos que serão usados nesse projeto, além do modelo padrão, existem os modelos do tipo autorregressivos (AR e ARX), do tipo árvore (XGB, XGBX, LGB, LGBX), redes neurais (MLP e LSTM) e máquinas de vetores de suporte (SVR e SVRX). Essa biblioteca é de fácil uso e aplicação permitindo gerar rapidamente modelos de previsão de séries temporais.
+
+Aqui nesse projeto irei usar uma base de dados de uma série temporal de temperatura mensal, nos Estados Unidos, que vai de Janeiro de 1895 a Janeiro de 2021. Os dados podem ser obtido no [seguinte link](https://www.ncdc.noaa.gov/cag/national/time-series/110/tavg/all/1/1895-2021?base_prd=true&begbaseyear=1901&endbaseyear=2021).
 
 ### Tabela das métricas de avaliação
 
