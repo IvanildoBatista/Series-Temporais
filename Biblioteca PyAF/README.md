@@ -4,6 +4,17 @@ PyAF é uma biblioteca Python de código aberto para previsão automática de s�
 
 Aqui nesse projeto irei usar uma base de dados de uma série temporal de temperatura mensal, nos Estados Unidos, que vai de Janeiro de 1895 a Janeiro de 2021. Os dados podem ser obtido no [seguinte link](https://www.ncdc.noaa.gov/cag/national/time-series/110/tavg/all/1/1895-2021?base_prd=true&begbaseyear=1901&endbaseyear=2021).
 
+## Etapas
+
+1. Importação das bibliotecas e módulos;
+2. Importação da base de dados;
+3. Análise dos dados;
+4. Separação dos dados de treino e teste;
+5. Treinamento dos modelos;
+6. Previsão dos modelos;
+7. Avaliação dos modelos;
+8. Retreino do modelo e geração de previsões para o futuro.
+
 ### Tabela das métricas de avaliação
 
 Conforma a tabela abaixo o melhor modelo foi o *Support Vector Regression*. Das cinco métricas calculadas esse modelo teve um bom desempenho em quatro delas.
