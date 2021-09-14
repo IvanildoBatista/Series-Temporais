@@ -1,34 +1,23 @@
-# Séries Temporais
+# Projetos de séries temporais
 
 Nesse repositório você encontrará projetos com os principais métodos de modelagem de séries temporais, como:
 
   1) **Modelos determinísticos**: Algoritmos de suavização simples, *Holt*, *Holt-Winters* e *Pegels*;
-  
   2) **Modelagem Univariada**: Modelagem Box-Jenkins ou modelo *ARIMA* (Autorregressivo integrado com médias móveis);
-  
   3) **Modelagem Multivariada**: Modelos *VAR* (Vetores Autorregressivos) e modelo *VECM* (Vetores com correção de erros);
-  
   4) **Redes neurais**: Recorrentes (*LSTM* - *Long short-term memory*) e Convolucionais (*Conv1D*);
-  
   5) **Modelagem linear**: Regressão linear, *Ridge*, *Lasso*, *Elastic-Net*, *Stochastic Gradient Descent*, etc;
-  
   6) **Biblioteca Facebook Prophet** (para séries univaridas e multivariadas);
-
   7) **Biblioteca Neural Prophet**;
-  
-  8) **Auto Machine Learning para Séries Temporais (AutoTS, PyCaret e ATSpy)**;
-  
-  9) **Biblioteca DARTS**;
-  
-  10) **Pacote Modeltime do R**;
-  
-  11) **Decomposição de séries temporais**: Aplicação de métodos de decomposição sazonal, *STL* e de filtros de séries temporais;
-  
-  12) **Análise de tendência em séries temporais com teste Mann Kendall**;
-
-  13) **Biblioteca AutoPy**;
-  
-  14) **Biblioteca Pycaret**. 
+  8) **Biblioteca Multi Prophet**;
+  9) **Biblioteca PyAF**;
+  10) **Auto Machine Learning para Séries Temporais (AutoTS, PyCaret e ATSpy)**;
+  11) **Biblioteca DARTS**;
+  12) **Pacote Modeltime do R**;
+  13) **Decomposição de séries temporais**: Aplicação de métodos de decomposição sazonal, *STL* e de filtros de séries temporais;
+  14) **Análise de tendência em séries temporais com teste Mann Kendall**;
+  15) **Biblioteca AutoPy**;
+  16) **Biblioteca Pycaret - módulo de regressão para séries temporais**. 
 
 ## Projetos
 
