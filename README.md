@@ -2,7 +2,7 @@
 
 Nesse repositório você encontrará projetos com os principais métodos de modelagem de séries temporais, como:
 
-  1) **Modelos determinísticos**: Algoritmos de suavização simples, *Holt*, *Holt-Winters* e *Pegels*;
+  1) **Modelos suavização exponencial**: Algoritmos de suavização simples, *Holt*, *Holt-Winters* e *Pegels*;
   2) **Modelagem Univariada**: Modelagem Box-Jenkins ou modelo *ARIMA* (Autorregressivo integrado com médias móveis);
   3) **Modelagem Multivariada**: Modelos *VAR* (Vetores Autorregressivos) e modelo *VECM* (Vetores com correção de erros);
   4) **Redes neurais**: Recorrentes (*LSTM* - *Long short-term memory*) e Convolucionais (*Conv1D*);
