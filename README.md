@@ -21,11 +21,11 @@ Nesse repositório você encontrará projetos com os principais métodos de mode
 
 ## Projetos
 
-**Projeto 1 - Aplicação de modelos determinísticos para o preço de casas**
-Apresentação e aplicação de algoritmos determinístico de séries temporais para modelagem e previsão de preços em casas em Londres. Foram utilizados os principais modelos e o modelo com melhor desempenho foi o Algoritmo de Suavização de **Pegels aditivo** com um erro médio absoluto (MAE) de **3981.576** e raiz quadrada a soma dos erros quadrados (RMSE) de 5261.611;
-
-**Projeto 2 - Impacto do coronavírus no Índice BOVESPA**
+**Projeto 1 - Impacto do coronavírus no Índice BOVESPA**
 Análise do impacto causal da pandemia do *coronavírus* no índice da Bolsa de Valores do Brasil (IBOVESPA). Nessa análise utilizando a biblioteca *causalimpact* e utilizando uma contrafactual gerada por um modelo ARIMA, o relatório gerado apontou um queda de -35,92% no índice IBOVESPA por conta da intervenção na série causada pelo coronavírus;
+
+**Projeto 2 - Aplicação de modelos determinísticos para o preço de casas**
+Apresentação e aplicação de algoritmos determinístico de séries temporais para modelagem e previsão de preços em casas em Londres. Foram utilizados os principais modelos e o modelo com melhor desempenho foi o Algoritmo de Suavização de **Pegels aditivo** com um erro médio absoluto (MAE) de **3981.576** e raiz quadrada a soma dos erros quadrados (RMSE) de 5261.611;
 
 **Projeto 3 - Modelagem *Box-Jenkins* em Python**
 Aplicação da metodologia Box-Jenkins modelagem de uma série temporal do consumo de cerveja, onde todas as etapas (identificação, estimação, diagnóstico do resíduos e previsão) serão apresentadas, explicadas e aplicadas. Aplicando essa metodologia encontramos inferimos vários modelos, mas o único que passou na etapa de diagnóstico dos resíduos foi o modelo 𝐴𝑅𝐼𝑀𝐴(1,1,0) e foi com esse modelos geramos previsões;
