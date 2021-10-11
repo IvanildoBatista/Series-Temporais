@@ -28,6 +28,10 @@ Análise do impacto causal da pandemia do *coronavírus* no índice da Bolsa de 
 Aplicação do teste não-paramétrico *Mann-Kendall* para identificar tendência em séries temporais. Ao nível de confiança de 5%, o teste identificou uma tendência positiva para a série de vendas no varejo de lojas de cerveja, vinho e licores nos Estados Unidos.
 
 **Projeto 3 - Pycaret para Machine Learning**
+**3.1** - Aplicação do módulo de regressão da biblioteca *Pycaret* para previsão de séries temporais utilizando o *fold_strategy='timeseries'* do *setup* da biblioteca. Para esse projeto foram usadas as defasagens da série de preços diários das ações do Banco Bradesco (*BBCD4.SA*). O modelo gerou uma previsão que, comparada com os valores de validação, obtiveram métricas de erros próximas de zero e um *R²* (coeficiente de determinação) de 0.87.
+
+**3.2** - Aplicação do módulo de séries temporais que foi implementado em Julho de 2020 para previsão de vendas no setor de varejo nos EUA. O melhor modelo foi o TBATS com um coeficiente de determinação (*R²*) de 0.72 .
+
 
 **Projeto 4 - AutoARIMA em Python**
 Aplicação do AutoARIMA para previsão do consumo de energia elétrica. Com a bibioteca PMDARIMA automatizamos todo o processo de escolha de parâmetros e encontramos um modelo com menor *AIC* (Akaike Information Criteria). Os resíduos do modelo apresentaram-se normais pelo teste de normalidade *Jarque-Bera*. OBS: onde está escrito 'Estatística **Chi²** lê-se *p-valor*;
