@@ -29,9 +29,9 @@ Aplicação do teste não-paramétrico *Mann-Kendall* para identificar tendênci
 
 **Projeto 3 - Pycaret para Machine Learning**
 
-**3.1** - Aplicação do módulo de regressão da biblioteca *Pycaret* para previsão de séries temporais utilizando o *fold_strategy='timeseries'* do *setup* da biblioteca. Para esse projeto foram usadas as defasagens da série de preços diários das ações do Banco Bradesco (*BBCD4.SA*). O modelo gerou uma previsão que, comparada com os valores de validação, obtiveram métricas de erros próximas de zero e um *R²* (coeficiente de determinação) de 0.87.
+**3.1**) Aplicação do módulo de regressão da biblioteca *Pycaret* para previsão de séries temporais utilizando o *fold_strategy='timeseries'* do *setup* da biblioteca. Para esse projeto foram usadas as defasagens da série de preços diários das ações do Banco Bradesco (*BBCD4.SA*). O modelo gerou uma previsão que, comparada com os valores de validação, obtiveram métricas de erros próximas de zero e um *R²* (coeficiente de determinação) de 0.87.
 
-**3.2** - Aplicação do módulo de séries temporais que foi implementado em Julho de 2020 para previsão de vendas no setor de varejo nos EUA. O melhor modelo foi o TBATS com um coeficiente de determinação (*R²*) de 0.72 .
+**3.2**) Aplicação do módulo de séries temporais que foi implementado em Julho de 2020 para previsão de vendas no setor de varejo nos EUA. O melhor modelo foi o TBATS com um coeficiente de determinação (*R²*) de 0.72 .
 
 
 **Projeto 4 - AutoARIMA em Python**
