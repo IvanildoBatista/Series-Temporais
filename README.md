@@ -31,15 +31,24 @@ Aplicação do teste não-paramétrico *Mann-Kendall* para identificar tendênci
 
 **3.1**) Aplicação do módulo de regressão da biblioteca *Pycaret* para previsão de séries temporais utilizando o *fold_strategy='timeseries'* do *setup* da biblioteca. Para esse projeto foram usadas as defasagens da série de preços diários das ações do Banco Bradesco (*BBCD4.SA*). O modelo gerou uma previsão que, comparada com os valores de validação, obtiveram métricas de erros próximas de zero e um *R²* (coeficiente de determinação) de 0.87.
 
-**3.2**) Aplicação do módulo de séries temporais que foi implementado em Julho de 2020 para previsão de vendas no setor de varejo nos EUA. O melhor modelo foi o TBATS com um coeficiente de determinação (*R²*) de 0.72 .
-
+**3.2**) Aplicação do módulo de séries temporais que foi implementado em Julho de 2020 para previsão de vendas no setor de varejo nos EUA. O melhor modelo foi o TBATS com um coeficiente de determinação (*R²*) de 0.72.
 
 **Projeto 4 - AutoARIMA em Python**
 Aplicação do AutoARIMA para previsão do consumo de energia elétrica. Com a bibioteca PMDARIMA automatizamos todo o processo de escolha de parâmetros e encontramos um modelo com menor *AIC* (Akaike Information Criteria). Os resíduos do modelo apresentaram-se normais pelo teste de normalidade *Jarque-Bera*. OBS: onde está escrito 'Estatística **Chi²** lê-se *p-valor*;
 
+**Projeto 5 - AutoTS em Python**
+Biblioteca AutoTS para previsão de séries temporais com os modelos *Facebook Prophet*, Vetores Autorregressivos, Modelos e *Machine Learning* e ARIMA. Para esse projeto, conforme as métricas abaixo, o melhor modelo para previsão de séries temporais de temperatura na cidade de Déhli, na Índia, foi o modelo *Facebook Prophet*
+
+| |   *RMSE*   |  *MAE*  |  *MSE*|  *MSLE* |  *MedAE* |  *R-squared* |
+|:----------------:|:------------------:|:------------------:|:------------------:|:------------------: |:------------------:|:------------------:|
+|**Facebook Prophet** | **3.173**| **2.558** | **10.071**|**0.025**|**2.193**|**70.3%**|
+|*SARIMAX* | 9.872| 8.558 | 97.447| 0.183 | 8.3|-7754.9%|
+|Vetor Autorregressivo | 10.477| 8.99 | 109.766| 0.2 | 9.219|-9522.3%|
+|*Machine Learning* | 11.747| 10.357 | 137.99| 0.253 | 11.693|-376.2%|
+|*ARIMA* | 12| 10 | 133| 0 | 12|-46300 %|
+
 **Projeto 5 - Aplicação de algoritmos de suavização exponencial para o preço de casas**
 Apresentação e aplicação de algoritmos de suavização exponencial de séries temporais para modelagem e previsão de preços em casas em Londres. Foram utilizados os principais modelos e o modelo com melhor desempenho foi o Algoritmo de Suavização de **Pegels aditivo** com um erro médio absoluto (MAE) de **3981.576** e raiz quadrada a soma dos erros quadrados (RMSE) de 5261.611;
-
 
 **Projeto 6 - Modelagem *Box-Jenkins* em Python**
 Aplicação da metodologia Box-Jenkins modelagem de uma série temporal do consumo de cerveja, onde todas as etapas (identificação, estimação, diagnóstico do resíduos e previsão) serão apresentadas, explicadas e aplicadas. Aplicando essa metodologia encontramos inferimos vários modelos, mas o único que passou na etapa de diagnóstico dos resíduos foi o modelo 𝐴𝑅𝐼𝑀𝐴(1,1,0) e foi com esse modelos geramos previsões;
