@@ -57,6 +57,8 @@ Biblioteca para modelagem de séries temporais e permite o treinamento de divers
 
 ![image](https://user-images.githubusercontent.com/63425404/138211667-bceded4c-c7b8-4f7c-852e-7355296d1de8.png)
 
+**Projeto 7 - *Facebook Prophet* **
+Nesse projeto será usada a biblioteca Prophet Facebook para modelagem de duas séries temporais, mas que referem-se ao mesmo ativo (o preço do ouro, valores diários e mensais). Para a primeira série aplicamos o modelo e validamos os resultados com os últimos 150 dias e obtivemos um RMSE de **82.97**; já com os dados mensais utilizamos os últimos 24 meses para validação do modelo e obtivemos um RMSE de **66.97**.
 
 **Projeto 7 - Aplicação de algoritmos de suavização exponencial para o preço de casas**
 Apresentação e aplicação de algoritmos de suavização exponencial de séries temporais para modelagem e previsão de preços em casas em Londres. Foram utilizados os principais modelos e o modelo com melhor desempenho foi o Algoritmo de Suavização de **Pegels aditivo** com um erro médio absoluto (MAE) de **3981.576** e raiz quadrada a soma dos erros quadrados (RMSE) de 5261.611;
@@ -67,14 +69,14 @@ Aplicação da metodologia Box-Jenkins modelagem de uma série temporal do consu
 **Projeto 7 - Modelagem multivariada de Séries Temporais**
 Uso do modelo VECM (*Vector Error Correction Model*) para analisar o comportamento de séries de preços futuros de commodities. Aqui aplicando esse modelo com as duas séries enocntramos os seguintes resultados: O impacto dos preços futuros de soja na série de preços futuros de milho é negativo e dura cerca 120 períodos (120 dias), em outras palavras, a variação do preço futuro da soja afeta negativamente a variação do preço futuro do milho. Em contrapartida o impacto do preço futuro afeta positivamente a variação do preço futuro de soja por um período menor que 120 dias. Encontramos também que há causalidade instantânea de uma série na outra e ausência de autocorrelação serial no modelo.
 
+**Projeto 8 - *Neural Prophet* para modelagem de séries temporais**
+Biblioteca similar ao *Facebook Prophet*, mas que utiliza em sua estrutura para modelagem a rede neural *AR-Net*. Nesse projeto foi modelado uma série de vendas de varejo mensais de cerveja, vinho e licores alcoólicos, que vai do ano de 1992 até o ano de 2020. Os últimos 24 meses da série foram separados para comparar o desempenho de previsão do modelo. **Resultado** : o modelo gerou previsões que foram estatisticamente semelhantes com a base de validação.
+
 **Projeto 8 - Modelagem de Séries Temporais com Redes Neurais**
 Aplicação da rede neural *LSTM* para previsão de preços de fechamento das ações da Petrobras. Utilizando a *LSTM* geramos um modelo com uma camada inicial, duas camadas intermediárias e uma camada de saída que gerou um **RMSE** (entre os valores preditos e os valores reais) de 0.723.
 
 **Projeto 9 - Aplicação de modelos lineares em séries temporais**
 Foram aplicados 12 modelos lineares da biblioteca *Scikit-Learn* em dados de séries temporais de preços de ações do Itaú Unibanco, no período do ano de 2019 ao ano de 2020. O modelo com melhor desempenho nas métricas **RMSE** e **R2** foi o *Theil Sen Regressor*. O *Theil Sen Regressor*, que é um modelo linear robusto a *outliers* teve um **RMSE** de 0.48117 e um **R2** de 99.73%.
-
-**Projeto 10 - *Prophet Facebook* para modelagem de dados**
-Nesse projeto será usada a biblioteca Prophet Facebook para modelagem de duas séries temporais, mas que referem-se ao mesmo ativo (o preço do ouro, valores diários e mensais). Para a primeira série aplicamos o modelo e validamos os resultados com os últimos 150 dias e obtivemos um RMSE de **82.97**; já com os dados mensais utilizamos os últimos 24 meses para validação do modelo e obtivemos um RMSE de **66.97**.
 
 **Projeto 11 - *AutoML* para Séries Temporais**
 Utilizando a biblioteca *auto-ts* geramos 4 modelos para séries temporais para previsão da temperatura média de 114 dias da cidade de Déli, na Índia. Os modelos foram: *Facebook Prophet*, ARIMA, SARIMAX, VAR e um modelo de *Machine Learning Random Forest*. O modelo de melhor resultado de previsão foi o *Facebook Prophet*, pois obteve as menores métricas de erro e o maior R-quadrado.
@@ -82,8 +84,6 @@ Utilizando a biblioteca *auto-ts* geramos 4 modelos para séries temporais para 
 **Projeto 12 - Modelagem de Séries Temporais com Redes Neurais Convolucionais**
 Aplicação da rede neural Convolucional (*Conv1D*) para previsão de Consumo de energia elétrica. Foir gerado um modelo (com treinamento de 10 épocas) para prever as 4440 observações finais da série de energia e a métrica de erro *RMSE* (raiz do erro quadrado médio) deum um valor de 0.40, uma resultado considerado bastante satisfatório.
 
-**Projeto 13 - *Neural Prophet* para modelagem de séries temporais**
-Biblioteca similar ao *Facebook Prophet*, mas que utiliza em sua estrutura para modelagem a rede neural *AR-Net*. Nesse projeto foi modelado uma série de vendas de varejo mensais de cerveja, vinho e licores alcoólicos, que vai do ano de 1992 até o ano de 2020. Os últimos 24 meses da série foram separados para comparar o desempenho de previsão do modelo. **Resultado** : o modelo gerou previsões que foram estatisticamente semelhantes com a base de validação.
 
 **OBS**: Em cada pasta de projeto se encontra um link onde as bases de dados podem ser acessadas e as bases de dados em formato *.csv*.
 
