@@ -34,7 +34,7 @@ Aplicação do teste não-paramétrico *Mann-Kendall* para identificar tendênci
 **3.2**) Aplicação do módulo de séries temporais que foi implementado em Julho de 2020 para previsão de vendas no setor de varejo nos EUA. O melhor modelo foi o TBATS com um coeficiente de determinação (*R²*) de 0.72.
 
 **Projeto 4 - AutoARIMA em Python**
-Aplicação do AutoARIMA para previsão do consumo de energia elétrica. Com a bibioteca PMDARIMA automatizamos todo o processo de escolha de parâmetros e encontramos um modelo com menor *AIC* (Akaike Information Criteria). Os resíduos do modelo apresentaram-se normais pelo teste de normalidade *Jarque-Bera*. OBS: onde está escrito 'Estatística **Chi²** lê-se *p-valor*;
+Aplicação do AutoARIMA para previsão do consumo de energia elétrica. Com a bibioteca PMDARIMA automatizamos todo o processo de escolha de parâmetros e encontramos um modelo com menor *AIC* (Akaike Information Criteria). Os resíduos do modelo apresentaram-se normais pelo teste de normalidade *Jarque-Bera*.
 
 **Projeto 5 - AutoTS em Python**
 Biblioteca AutoTS para previsão de séries temporais com os modelos *Facebook Prophet*, Vetores Autorregressivos, Modelos e *Machine Learning* e ARIMA. Para esse projeto, conforme as métricas abaixo, o melhor modelo para previsão de séries temporais de temperatura na cidade de Déhli, na Índia, foi o modelo *Facebook Prophet*
