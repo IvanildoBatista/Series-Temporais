@@ -47,7 +47,14 @@ Biblioteca AutoTS para previsão de séries temporais com os modelos *Facebook P
 |*Machine Learning* | 11.747| 10.357 | 137.99| 0.253 | 11.693|-376.2%|
 |*ARIMA* | 12| 10 | 133| 0 | 12|-46300 %|
 
-**Projeto 5 - Aplicação de algoritmos de suavização exponencial para o preço de casas**
+**Projeto 5 - Biblioteca ATSPy**
+Biblioteca de *Auto Time Series* para previsão de séries temporais com uma variedade de modelos (ARIMA, HWAAS, HWAMS, TATS, TBAT, TBATS1, TBATP1 e TBATS2). O melhor modelo desse projeto foi o TBATP1 que obteve as melhores métricas de avaliação e abaixo pode-se observar o gráfico com a série original, a série treinada e as previsões.
+
+![image](https://user-images.githubusercontent.com/63425404/124525691-84760900-ddd6-11eb-950f-5552382324de.png)
+
+
+
+**Projeto 6 - Aplicação de algoritmos de suavização exponencial para o preço de casas**
 Apresentação e aplicação de algoritmos de suavização exponencial de séries temporais para modelagem e previsão de preços em casas em Londres. Foram utilizados os principais modelos e o modelo com melhor desempenho foi o Algoritmo de Suavização de **Pegels aditivo** com um erro médio absoluto (MAE) de **3981.576** e raiz quadrada a soma dos erros quadrados (RMSE) de 5261.611;
 
 **Projeto 6 - Modelagem *Box-Jenkins* em Python**
