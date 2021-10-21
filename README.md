@@ -52,9 +52,13 @@ Biblioteca de *Auto Time Series* para previsão de séries temporais com uma var
 
 ![image](https://user-images.githubusercontent.com/63425404/124525691-84760900-ddd6-11eb-950f-5552382324de.png)
 
+**Projeto 6 - Biblioteca DARTS para previsão de vendas em restaurantes**
+Biblioteca para modelagem de séries temporais e permite o treinamento de diversos modelos. Além disso permite realizar o *backtesting* do modelo, o que torna a avaliação do modelo mais acurada. O melhor modelo para a previsão de vendas de restaurantes foi um de suavização exponencial com sazonalidade multiplicativa, tendência aditiva e uma sazonalidade de vinte e quatro períodos. Abaixo pode-se observar as previsões do modelo com e sem *gridsearch*.
+
+![image](https://user-images.githubusercontent.com/63425404/138211667-bceded4c-c7b8-4f7c-852e-7355296d1de8.png)
 
 
-**Projeto 6 - Aplicação de algoritmos de suavização exponencial para o preço de casas**
+**Projeto 7 - Aplicação de algoritmos de suavização exponencial para o preço de casas**
 Apresentação e aplicação de algoritmos de suavização exponencial de séries temporais para modelagem e previsão de preços em casas em Londres. Foram utilizados os principais modelos e o modelo com melhor desempenho foi o Algoritmo de Suavização de **Pegels aditivo** com um erro médio absoluto (MAE) de **3981.576** e raiz quadrada a soma dos erros quadrados (RMSE) de 5261.611;
 
 **Projeto 6 - Modelagem *Box-Jenkins* em Python**
