@@ -57,12 +57,10 @@ Biblioteca para modelagem de séries temporais e permite o treinamento de divers
 
 ![image](https://user-images.githubusercontent.com/63425404/138211667-bceded4c-c7b8-4f7c-852e-7355296d1de8.png)
 
-**Projeto 7 - Facebook Prophet ** 
-
+**Projeto 7 - Facebook Prophet** 
 Nesse projeto será usada a biblioteca Prophet Facebook para modelagem de duas séries temporais, mas que referem-se ao mesmo ativo (o preço do ouro, valores diários e mensais). Para a primeira série aplicamos o modelo e validamos os resultados com os últimos 150 dias e obtivemos um RMSE de **82.97**; já com os dados mensais utilizamos os últimos 24 meses para validação do modelo e obtivemos um RMSE de **66.97**.
 
-**Projeto 8 - Neural Prophet para modelagem de séries temporais **
-
+**Projeto 8 - Neural Prophet para modelagem de séries temporais**
 Biblioteca similar ao Facebook Prophet, mas que utiliza em sua estrutura para modelagem a rede neural AR-Net. Nesse projeto foi modelado uma série de vendas de varejo mensais de cerveja, vinho e licores alcoólicos, que vai do ano de 1992 até o ano de 2020. Os últimos 24 meses da série foram separados para comparar o desempenho de previsão do modelo. Resultado : o modelo gerou previsões que foram estatisticamente semelhantes com a base de validação.
 
 **Projeto 7 - Aplicação de algoritmos de suavização exponencial para o preço de casas**
